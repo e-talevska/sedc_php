@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: code
- * Date: 04.05.2016
- * Time: 18:21
- */
+function my_name(){
+    echo "jovce";
+}
+?>
+<div>
+    <p>Ova ke se prikaze vo stranata</p>
+</div>
