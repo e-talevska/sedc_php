@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 <<<<<<< HEAD
 include ("header.php");
@@ -16,6 +17,15 @@ require_once("../cas06.php");
 ?>
 
 >>>>>>> emilija_talevska
+=======
+<?php 
+	include("header.php")
+?>
+<?php
+	require_once("../cas06.php");
+?>
+		
+>>>>>>> 1a9e7f7b28ed399d446050ef5583e077c832b001
 		<div id="hero-image">
 			<div class="wrapper">
 				<h2><strong>A Minimal, clean</strong><br/>
@@ -81,6 +91,7 @@ require_once("../cas06.php");
 			</div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		<?php
 		include ("footer.php");
@@ -91,3 +102,10 @@ require_once("../cas06.php");
 	include("footer.php");
 ?>
 >>>>>>> emilija_talevska
+=======
+		
+		<?php 
+		include ("footer.php");
+		
+		?>
+>>>>>>> 1a9e7f7b28ed399d446050ef5583e077c832b001

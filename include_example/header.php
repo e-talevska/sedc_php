@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <!doctype html>
 <html lang="en">
@@ -24,6 +25,8 @@
 			</div>
 		</header>
 =======
+=======
+>>>>>>> 1a9e7f7b28ed399d446050ef5583e077c832b001
 <!doctype html>
 <html lang="en">
 <head>
@@ -41,6 +44,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="portfolio.php">Portfolio</a></li>
+<<<<<<< HEAD
                     <li><a href="http://google.com">Contact</a></li>
                     <li><a href="crnobelo.com.mk">Blog</a></li>
                 </ul>
@@ -48,3 +52,11 @@
         </div>
     </header>
 >>>>>>> emilija_talevska
+=======
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+>>>>>>> 1a9e7f7b28ed399d446050ef5583e077c832b001
