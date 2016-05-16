@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> emilija_talevska
 <footer>
     <div class="wrapper">
         <div id="footer-info">
@@ -35,4 +38,7 @@
 </div>
 </body>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> emilija_talevska

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 include ("header.php");
 ?>
 <?php
@@ -6,6 +7,15 @@ require_once("../cas06.php");
 
 ?>
 		
+=======
+	include("header.php");
+?>
+
+<?php
+	require_once("../cas06.php");
+?>
+
+>>>>>>> emilija_talevska
 		<div id="hero-image">
 			<div class="wrapper">
 				<h2><strong>A Minimal, clean</strong><br/>
@@ -70,7 +80,14 @@ require_once("../cas06.php");
 				<a href="#" class="button-2">Get Started</a>
 			</div>
 		</div>
+<<<<<<< HEAD
 
 		<?php
 		include ("footer.php");
 		?>
+=======
+		
+<?php
+	include("footer.php");
+?>
+>>>>>>> emilija_talevska
