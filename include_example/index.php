@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php
 include_once('header.php');
@@ -6,6 +7,16 @@ include_once('header.php');
 	require_once("../exercise8.php");
 
 ?>
+=======
+<?php
+	include("header.php");
+?>
+
+<?php
+	require_once("../cas06.php");
+?>
+
+>>>>>>> emilija_talevska
 		<div id="hero-image">
 			<div class="wrapper">
 				<h2><strong>A Minimal, clean</strong><br/>
@@ -71,6 +82,12 @@ include_once('header.php');
 			</div>
 		</div>
 		
+<<<<<<< HEAD
 	<?php
 	include_once('footer.php');
 	?>
+=======
+<?php
+	include("footer.php");
+?>
+>>>>>>> emilija_talevska
