@@ -13,10 +13,17 @@
             <h1>Simply<span class="color">.</span></h1>
             <nav>
                 <ul>
+<<<<<<< HEAD
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
+=======
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="portfolio.php">Portfolio</a></li>
+                    <li><a href="http://google.com">Contact</a></li>
+                    <li><a href="crnobelo.com.mk">Blog</a></li>
+>>>>>>> emilija_talevska
                 </ul>
             </nav>
         </div>
