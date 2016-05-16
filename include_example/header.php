@@ -16,7 +16,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="portfolio.php">Portfolio</a></li>
                     <li><a href="http://google.com">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="crnobelo.com.mk">Blog</a></li>
                 </ul>
             </nav>
         </div>
