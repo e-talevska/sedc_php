@@ -15,7 +15,7 @@ if(isset($_POST['login'])) {
         $error .="<br> The password cannot have '?' at the beginning ";
     }
     if(strpos($_POST['password'],"pass")=== false){
-        $error .="<br>The password doesn't contain 'pass'.";
+        $error .="<br> The password doesn't contain 'pass'.";
     }
     if($error == ""){
         $_SESSION['username'] = $username;
