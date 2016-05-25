@@ -20,3 +20,10 @@ fclose($connection);
 //
 //
 //var_dump($content );
+
+$conn = fopen("write.txt", "a");
+fwrite($conn, "Dopolnuvanje vo write.txt");
+fclose($conn);
+
+echo file_get_contents("write.txt");
+unlink("write.txt");
