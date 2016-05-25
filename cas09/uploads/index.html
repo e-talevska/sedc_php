@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP &amp; MySQL</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="assets/css/reveal.css">
+		<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'assets/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<!-- Slide 1 -->
+					<section id="home" style="text-align: left;">
+						<div>
+							<img src="assets/img/sedc_logo.jpg" alt="logo" style="border:none; box-shadow:none; vertical-align: middle;float: left;" />
+							<div style="float: left; margin: 6% 0 0 0;">
+								<h1>PHP &amp; MySQL</h1><br>
+								<small>Created by <a href="https://mk.linkedin.com/in/emilija-talevska-1033b873">Emilija Talevska</a> </small>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<small style="font-size: 15px; float: right;">© 2016 Seavus Education &amp; Development Center</small>
+					</section>
+
+					<!-- Slide 2 -->
+					<section class="center-back" data-background="assets/img/PhpForDynamicWeb.jpg">
+							<!-- Here the image is showing in the background of the slide -->
+					</section>
+
+
+					<!-- Slide 3 -->
+					<section style="text-align: left;">
+						<h2>Course overview</h2>
+						<ul>
+							<li>This course is divided into three main parts</li>
+						</ul>
+					</section>
+
+
+					<!-- Slide 4 -->
+					<section style="text-align: left;">
+						<h2>Part 1</h2>
+						<ul>
+							<li>PHP Syntax</li>
+							<li>Data Types</li>
+							<li>Functions</li>
+							<li>Comparison operators</li>
+							<li>Control structures</li>
+							<li>Web programming</li>
+							<li>Object oriented programming in PHP</li>
+						</ul>
+					</section>
+
+					<!-- Slide 5 -->
+					<section style="text-align: left;">
+						<h2>Part 2</h2>
+						<ul>
+							<li>Database programming</li>
+							<li>Introduction to MySQL</li>
+							<li>Basic SQL queries</li>
+							<li>Planning database structure</li>
+							<li>Manipulating data</li>
+							<li>Manipulating with database from PHP</li>
+						</ul>
+					</section>
+
+					<!-- Slide 6 -->
+					<section style="text-align: left;">
+						<h2>Part 3</h2>
+						<ul>
+							<li>MVC pattern</li>
+							<li>PHP framework - Codeigniter</li>
+							<li>Example application with Codeigniter, PHP and MySQL</li>
+						</ul>
+					</section>
+
+					<!-- Slide 7 -->
+					<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+						<h1>Introduction</h1>
+					</section>
+
+					<!-- Slide 8 -->
+					<section style="text-align: left;">
+						<h2>What is PHP?</h2>
+						<ul>
+							<li><strong>PHP</strong> == 'PHP: Hypertext Preprocessor'</li>
+							<li>Widely-used open source language, especially suited to generate dynamic web-pages</li>
+							<li>Server side scripting language</li>
+							<li>Interpreted language, scripts are parsed at run-time rather than compiled beforehand</li>
+						</ul>
+					</section>
+
+					<!-- Slide 9 -->
+					<section style="text-align: left;">
+						<h2>What is a PHP File?</h2>
+						<ul>
+							<li>PHP files can contain text, HTML, CSS, JavaScript, and PHP code</li>
+							<li>PHP code reside between reserved PHP tags
+								<ul>
+									<li>This allows the programmer to embed PHP scripts within HTML pages</li>
+									<li><p><pre><code class="hljs" data-trim contenteditable>
+									&lt;p&gt; &lt;?php echo "Hello class!"; ?&gt; &lt;/p&gt;
+									</code></pre></p></li>
+								</ul>
+							</li>
+							<li>PHP code are executed on the server, and the result is returned to the browser as plain HTML</li>
+							<li>PHP files have extension ".php"</li>
+						</ul>
+					</section>
+
+					<!-- Slide 10 -->
+					<section style="text-align: left;">
+						<h2>What Can PHP Do?</h2>
+						<ul>
+							<li>Can generate dynamic page content</li>
+							<li>Can create, open, read, write, delete, and close files on the server</li>
+							<li>Can collect form data</li>
+							<li>Can add, delete, modify data in your database</li>
+							<li>Can be used to control user-access</li>
+						</ul>
+					</section>
+
+					<!-- Slide 11 -->
+					<section style="text-align: left;">
+						<h2>Why choose PHP?</h2>
+						<ul>
+							<li>Open source, free software</li>
+							<li><em>Cross platform</em> - Runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.) </li>
+							<li>Is compatible with almost all servers used today (Apache, IIS, etc.)</li>
+							<li>Compatible with many popular databases (MySQL, Oracle, PostgreSQL, mSQL, DB2 Sybase)</li>
+							<li>Various built-in functions allow for fast development</li>
+							<li>Large, active, developer community
+								<ul>
+									<li>
+										Over 20 million web sites use PHP
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 12 -->
+					<section style="text-align: left;">
+						<h2>PHP History</h2>
+						<ul>
+							<li><span style="color:#007ac9;">Version 1 - 1994</span>
+								<ul>
+									<li>Written by Rasmus Lerdorf</li>
+									<li><strong>CGI</strong> (Common Gateway Interface) binaries in the C programming language to help him maintain his personal home page</li>
+								</ul>
+							</li>
+							<li><span style="color:#007ac9;">Version 2 - 1995</span>
+								<ul>
+									<li>First public release</li>
+									<li>Code that interprets data submitted by web form</li>
+									<li>"Personal Home Page Tools"</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 13 -->
+					<section style="text-align: left;">
+						<h2>PHP History (1)</h2>
+						<ul>
+							<li><span style="color:#007ac9;">Version 3 - 1998</span>
+								<ul>
+									<li>Two more developers (Andi Gutmans and Zeev Suraski)</li>
+									<li>PHP was rewritten</li>
+									<li>"<strong>PHP</strong>: Hypertext Preprocessor"</li>
+								</ul>
+							</li>
+							<li><span style="color:#007ac9;">Version 4 - 2000</span>
+								<ul>
+									<li>Company "Zend" was formed, which still guides PHP developemnt</li>
+									<li>PHP core was rewritten</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 14 -->
+					<section class="font90" style="text-align: left;">
+						<h2>PHP History (2)</h2>
+						<ul>
+							<li><span style="color:#007ac9;">Version 5 - 2004</span>
+								<ul>
+									<li>New features</li>
+									<li>Better performance</li>
+									<li>Improved Object – Oriented programming</li>
+								</ul>
+							</li>
+							<li><span style="color:#007ac9;">Version 6 (Never released)</span>
+								<ul>
+									<li>Initiation to bring native Unicode support throughout PHP</li>
+									<li>In 2010, the project was officially abandoned</li>
+								</ul>
+							</li>
+							<li><span style="color:#007ac9;">Version 7 - 2015</span>
+								<ul>
+									<li>Optimized PHP performance </li>
+									<li>New features</li>
+									<li>Improvements that require backward-compatibility breaks</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 15 -->
+					<section style="text-align: left;">
+						<h2>TOOLS YOU NEED FOR THIS COURSE</h2>
+						<ul>
+							<li>Web server</li>
+							<li>PHP</li>
+							<li>Database (MySQL)</li>
+							<li>Text Editor (Notepad, Notapad++, Brackets, SublimeText.....)</li>
+							<li>Web Browser (Firefox, Chrome, Edge....)</li>
+							<li>Yourself on place! :)</li>
+						</ul>
+					</section>
+
+					<!-- Slide 16 -->
+					<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+						<h1>Syntax</h1>
+					</section>
+
+					<!-- Slide 17 -->
+					<section style="text-align: left;">
+						<h2>How does PHP code look like?</h2>
+						<ul>
+							<li>Structurally similar to C/C++</li>
+							<li>Supports procedural and object-oriented paradigm</li>
+							<li>All PHP statements end with a semi-colon</li>
+							<li>A PHP script can be placed anywhere in the document</li>
+							<li>Each PHP script must be enclosed in the reserved PHP tag</li>
+						</ul>
+						<p><pre><code class="hljs" data-trim contenteditable>
+							&lt;?php //->start of PHP block code
+  //PHP code
+?&gt; <!-- end of PHP block code -->
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 18 -->
+					<section style="text-align: left;">
+						<h2  style="color:#e8643b;">Example</h2>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							&lt;?php 
+	echo "Hello class!"; 
+?&gt;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 19 -->
+					<section style="text-align: left;">
+						<h2>Embedding PHP Code on a Web Page</h2>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							&lt;?php ?&gt;
+						</code></pre></p>
+					</section>
+
+				</section>
+				<section>
+					<!-- Slide 20 -->
+					<section style="text-align: left;">
+						<h2>Embedding PHP Code on a Web Page</h2>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							&lt;?php phpinfo(); ?&gt;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Outputting Dynamic Text</h2>
+						<ul>
+							<li>The PHP command <em>echo</em> is used to output one or more strings
+								<ul>
+									<li>The typical usage for this is to send data to the client’s web-browser</li>
+								</ul>
+							</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							&lt;?php echo "Hello World!"; ?&gt;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc1.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc2.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc3.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc4.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc5.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc6.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc7.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc8.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 21 -->
+					<section style="text-align: left;">
+						<h2>Request – Response Cycle</h2>
+						<img src="assets/img/rrc9.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 22 -->
+					<section style="text-align: left;">
+						<h2>Inserting Code Comments</h2>
+						<ul>
+							<li>
+								<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							// C++ and Java-style comment
+						</code></pre></p>
+							</li>
+							<li>
+								<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							# Shell-style comments
+						</code></pre></p>
+							</li>
+							<li>
+								<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+							/* C-style comments
+These can span multiple lines 
+*/
+						</code></pre></p>
+							</li>
+						</ul>
+						
+					</section>
+
+					<!-- Slide 16 -->
+					<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+						<h1>Variables</h1>
+					</section>
+
+					<!-- Slide 23 -->
+					<section style="text-align: left;">
+						<h2>Variables</h2>
+						<ul>
+							<li>In all programming languages we need to keep truck of data</li>
+							<li>Container</li>
+							<li>Giving a name to a piece of computer memory</li>
+						</ul>
+						<img src="assets/img/variables.png" alt="logo" style="border:none; box-shadow:none;" />
+					</section>
+
+					<!-- Slide 24 -->
+					<section class="font80" style="text-align: left;">
+						<h2>Variables</h2>
+						<ul>
+							<li>Data stored in variables can be from different type</li>
+							<li>PHP allows storing of 8 types of variables
+								<ul>
+									<li>Four scalar (single-valued) data types:
+										<ul>
+											<li><span style="color:#007ac9;">Integer</span> — Used for whole numbers</li>
+											<li><span style="color:#007ac9;">Float (also called double)</span> — Used for real numbers</li>
+											<li><span style="color:#007ac9;">String</span> — Used for strings of characters</li>
+											<li><span style="color:#007ac9;">Boolean</span> — Used for true or false values</li>
+										</ul>
+									</li>
+									<li>Two nonscalar (multivalued) data types:
+										<ul>
+											<li><span style="color:#007ac9;">Array</span> — Used to store multiple data items</li>
+											<li><span style="color:#007ac9;">Object</span> — Used for storing instances of classes</li>
+										</ul>
+									</li>
+									<li>Two special types are also available:
+										<ul>
+											<li><span style="color:#007ac9;">Resource</span> They represent external resources(such as database connections)</li>
+											<li><span style="color:#007ac9;">NULL</span> (not been given a value, have been unset, or have been given the specific value NULL)</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 25 -->
+					<section style="text-align: left;">
+						<h2>Variables</h2>
+						<ul>
+							<li>PHP does not require variables to be declared</li>
+							<li>A variable is created when you first assign a value to it</li>
+							<li>PHP is called weakly typed, or dynamically typed language
+							<ul>
+								<li>The type of a variable is determined by the value assigned to it</li>
+							</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 26 -->
+					<section style="text-align: left;">
+						<h2>Variables</h2>
+						<ul>
+							<li>PHP variables must begin with a <em>$</em> sign</li>
+							<li>Followed by letter or underscore</li>
+							<li>Can contain letters, numbers or underscores</li>
+							<li>No spaces</li>
+							<li><strong>Case-sensitive</strong> ($Foo != $foo != $fOo)</li>
+						</ul>
+					</section>
+
+					<!-- Slide 27 -->
+					<section style="text-align: left;">
+						<h2  style="color:#e8643b;">Example</h2>
+						<p><pre>
+$item
+$Item
+$myVariable
+$this_variable
+<del>$this-variable</del> // Not valid
+<del>$99problems</del> // Not valid
+$product3
+<del>$_book</del> // Not recommended 
+<del>$__bookPage</del> // Not recommended
+						</pre></p>
+					</section>
+
+					<!-- Slide 28 -->
+					<section style="text-align: left;">
+						<h2>Variables</h2>
+						<ul>
+							<li>Globally and locally-scoped variables
+								<ul>
+									<li><em>Global variables</em> can be used anywhere</li>
+									<li><em>Local variables</em> restricted to a part of the code (function or class)</li>
+								</ul>
+							</li>
+							<li>Certain variable names reserved by PHP (<em>Superglobal variables</em>)
+								<ul>
+									<li>Form variables ($_POST, $_GET)</li>
+									<li>Server variables ($_SERVER)</li>
+									<li>More on: <a target="_blank" href="http://php.net/manual/en/reserved.php">php.net/manual/en/reserved.php</a></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Slide 29 -->
+					<section style="text-align: left;">
+						<h2>String</h2>
+						<ul>
+							<li>Sequence of characters</li>
+							<li>A string can be any text inside quotes. You can use single or double quotes.</li>
+							<li>Double quotes are used when we want a variable to be interpreted not literally outputed</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+						//same
+$x = "Hello world!";
+$y = 'Hello world!';
+
+//not the same
+$name = "Emilija";
+$x = "Hello $name!"; //Hello Emilija!
+$y = 'Hello $name!'; //Hello $name!
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 30 -->
+					<section style="text-align: left;">
+							<h2>Quotes within strings</h2>
+							<ul>
+								<li><code>"It's really nice to be a programmer"</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+								<li><code>'It's really nice to be a programmer'</code><img src="assets/img/cancel.jpg" alt="cancel" style="border:none; box-shadow:none;" /></li>
+							</ul>
+					</section>
+
+				</section>
+				<section>
+					<!-- Slide 31 -->
+					<section style="text-align: left;">
+							<h2>Quotes within strings</h2>
+							<ul>
+								<li><code>"It's really nice to be a programmer"</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+								<li><code>'It<span class="curcle">&#92;'</span>s really nice to be a programmer'</code><img src="assets/img/tick.jpg" alt="tick" style="border:none; box-shadow:none;" /></li>
+
+							</ul>
+					</section>
+
+					<!-- Slide 31 -->
+					<section style="text-align: left;">
+						<h2>Integer</h2>
+						<ul>
+							<li>Non-decimal number between -2,147,483,648 and 2,147,483,647</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+$x = 5985;
+$y = -1;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 32 -->
+					<section style="text-align: left;">
+						<h2>Float</h2>
+						<ul>
+							<li>Number with a decimal point or a number in exponential form</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+$x = 10.365;
+$y = 7E-10;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 33 -->
+					<section style="text-align: left;">
+						<h2>Boolean</h2>
+						<ul>
+							<li>Represents two possible states: <em>TRUE</em> or <em>FALSE</em></li>
+							<li>Often used in conditional testing</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+$x = true;
+$y = false;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 34 -->
+					<section style="text-align: left;">
+						<h2 style="color:#e8643b;">Exercise - #1</h2>
+						<ul>
+							<li><strong>Decription: </strong>Create new php file inside your 'exercises' folder and name it <span style="color:#007ac9;">Exercise1.php</span></li>
+							<li>Declare 3 variables with the following data types:
+							<ul>
+								<li>Integer</li>
+								<li>Float</li>
+								<li>Boolean</li>
+							</ul>
+							</li>
+							<li>Display them on the screen</li>
+							<li><strong>Time to accomplish:</strong> 10 minutes.</li>
+						</ul>
+						<small>Note: Use <em>echo</em> command in order to display the variabales on the screen</small>
+					</section>
+
+					<!-- Slide 35 -->
+					<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+						<h1>Constants</h1>
+					</section>
+
+					<!-- Slide 36 -->
+					<section style="text-align: left;">
+						<h2>Constants</h2>
+						<ul>
+							<li>Constants are like variables except that once they are defined they cannot be changed or undefined.</li>
+							<li>A valid constant name starts with a letter or underscore (no $ sign before the constant name).</li>
+							<li>Constants can store only boolean, integer, float, or string data.</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+define('PI', 3.14);
+echo PI;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 35 -->
+					<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+						<h1>Operators and Operations</h1>
+					</section>
+
+					<!-- Slide 35 -->
+					<section class="font80" style="text-align: left;">
+						<h2>Arithmetic Operators</h2>
+						<ul>
+							<li>Follows the basic math rules</li>
+						</ul>
+						<table>
+							<tr>
+								<th>Operator</th>
+								<th>Name</th>
+								<th>Example</th>
+							</tr>
+							<tr>
+								<td>+</td>
+								<td>Addition</td>
+								<td>$a + $b</td>
+							</tr>
+							<tr>
+								<td>-</td>
+								<td>Subtraction</td>
+								<td>$a - $b</td>
+							</tr>
+							<tr>
+								<td>*</td>
+								<td>Multiplication</td>
+								<td>$a * $b</td>
+							</tr>
+							<tr>
+								<td>/</td>
+								<td>Division</td>
+								<td>$a / $b</td>
+							</tr>
+							<tr>
+								<td>%</td>
+								<td>Modulus</td>
+								<td>$a % $b</td>
+							</tr>
+							<tr>
+								<td>++</td>
+								<td>Increment</td>
+								<td>$a++</td>
+							</tr>
+							<tr>
+								<td>--</td>
+								<td>Decrement</td>
+								<td>$a--</td>
+							</tr>
+						</table>
+						<ul class="font90">
+							<li>Note: If you apply them to strings, PHP will try to convert the string to a number. If it contains an e or an E, it will be read as being in scientific notation and converted to a float, otherwise, it will be converted to an integer.</li>
+						</ul>
+					</section>
+
+					<!-- Slide 36 -->
+					<section style="text-align: left;">
+						<h2>Concatenation</h2>
+						<ul>
+							<li>Use a <em>period</em> to join strings into one</li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+$string1="Hello";
+$string2="PHP";
+$string3=$string1 . " " . $string2;
+echo $string3;
+						</code></pre></p>
+					</section>
+
+					<!-- Slide 37 -->
+					<section style="text-align: left;">
+						<h2>Combined Assignment Operators</h2>
+						<table>
+							<tr>
+								<th>Operator</th>
+								<th>Use</th>
+								<th>Equivalent To</th>
+							</tr>
+							<tr>
+								<td>+=</td>
+								<td>$a+=$b</td>
+								<td>$a=$a+$b</td>
+							</tr>
+							<tr>
+								<td>-=</td>
+								<td>$a-= $b</td>
+								<td>$a=$a-$b</td>
+							</tr>
+							<tr>
+								<td>*=</td>
+								<td>$a*= $b</td>
+								<td>$a=$a*$b</td>
+							</tr>
+							<tr>
+								<td>/=</td>
+								<td>$a/= $b</td>
+								<td>$a=$a/$b</td>
+							</tr>
+							<tr>
+								<td>%=</td>
+								<td>$a%=$b</td>
+								<td>$a=$a%$b</td>
+							</tr>
+							<tr>
+								<td>.=</td>
+								<td>$a.= $b</td>
+								<td>$a=$a.$b</td>
+							</tr>
+						</table>
+						
+					</section>
+
+					<!-- Slide 38 -->
+					<section style="text-align: left;">
+						<h2>Operator precedence</h2>
+						<ul>
+							<li>Multiplication ( * ) and division ( / ) take precedence over addition (+) and subtraction (–).</li>
+							<li>Use <em>parentheses ()</em> to group operations </li>
+						</ul>
+						<p><pre><code style="font-size: 30px;" class="hljs" data-trim contenteditable>
+$result = ( 5 + 5 ) * 10;
+						</code></pre></p>
+					</section>
+
+					<section style="text-align: left;">
+						<h2  style="color:#e8643b;">Example (Lead by lecturer) - #1</h2>
+						<ul>
+							<li><strong>Decription: </strong>Write PHP script that will convert length given in feet to meters</li>
+							<li><strong>Formula:</strong> m = ft x 0.3048</li>
+							<li>Display the result on the screen</li>
+						</ul>
+					</section>
+
+					<!-- Slide 34 -->
+					<section style="text-align: left;">
+						<h2 style="color:#e8643b;">Exercise - #2</h2>
+						<ul>
+							<li><strong>Decription: </strong>Write PHP script that will calculate the area of rectangle</li>
+							<li><strong>Formula:</strong> P = a * b</li>
+							<li>Display the result on the screen</li>
+							<li><strong>Time to accomplish:</strong> 10 minutes.</li>
+						</ul>
+						<small>Note: Use <em>echo</em> command in order to display the variabales on the screen</small>
+					</section>
+
+					<!-- Slide  -->
+					<section style="text-align: left;">
+						<h1>Thank you!</h1>
+						<p>
+							<a href="#">Questions?</a> <br>
+						</p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="assets/lib/js/head.min.js"></script>
+		<script src="assets/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				 // Transition speed
+    			transitionSpeed: 'default', // default/fast/slow
+
+				 // Enable slide navigation via mouse wheel
+    			mouseWheel: true,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'assets/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

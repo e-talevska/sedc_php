@@ -1,9 +1,15 @@
 <?php
 session_start();
-if(!isset($_SESSION['logiran'])){
-    header("Location: prv.php");
+//if the user is not logged in
+//if(!isset($_COOKIE['logiran'])) {
+//    header("Location: form.php");
+//}
+if(isset($_SESSION['logiran']) === false) {
+    header("Location: form.php");
 }
+var_dump($_SESSION);
 ?>
+
 <html>
     <head>
         <title>Prv</title>
