@@ -1,0 +1,2 @@
+Pisuvame od pocetok vo write.txt
+Dopolnuvame vo write.txt
